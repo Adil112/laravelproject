@@ -139,7 +139,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        //Whoops\Handler\PrettyPageHandler::class,
+
         Barryvdh\Debugbar\ServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
