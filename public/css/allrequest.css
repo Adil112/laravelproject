@@ -35,6 +35,19 @@ header {
 form[name="search"] {
     float: right;
 }
+.main{
+
+    width: 1260px;
+}
+.main div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contents{
+    width: 1000px;
+    margin: 0px;
+}
 nav a {
     text-decoration: none;
 }
@@ -82,61 +95,102 @@ h1 {
     margin: 0;
     padding: 0 10px;
 }
+.book{
+    width: 300px;
+}
 
-
-.authorization input {
-    width: 250px;
-    height: 36px;
-    padding-left: 10px;
-    border: 1px solid #29c5e6;
-    border-radius: 5px;
-    outline: none;
-    background: #fff;
-    color: #919191;
+.book div+div{
+    margin-left: 40px;
+}
+.rows{
     display: inline-block;
-    margin-bottom: 10px;
-    margin-left: 40%;
+    vertical-align: top;
+    width: 800px;
+}
+.data{
+    font: 26px 'Oswald', sans-serif;
 
-}
-.authorization button {
-    margin-left: 10px;
-    top: 0;
-    right: 0px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    background: #29c5e6;
-    border-radius: 5px 5px 5px 5px;
-    margin-left: 46.5%;
-    margin-bottom: 10px;
-}
-.authorization button:before {
-    content: "Войти";
-    font-family: SansSerif;
-    font-size: 16px;
-    color: #F9F0DA;
-}
-
-.authorization a{
-    font-family: SansSerif;
-    font-size: 16px;
     color: #29c5e6;
-    margin-left: 47%;
-
+    display: block;
+}
+.num{
+    color: #29c5e6;
 }
 
 
+.content{
+    margin-left: 50px;
+}
+
+.row div{
+    display: inline-block;
 
 
+}
+.row > div+div{
+    margin-left: 100px;
+    font: 16px 'Oswald', sans-serif;
+    margin-top: 10px;
+}
+.rowlabel{
+    margin-bottom: 20px;
+    margin-left: 50px;
+    border: 1px solid #919191;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    width: 1000px;
+}
+.megarow{
+    width: 1000px;
+}
+.megarow div{
+    display: inline-block;
 
+}
 
+.price{
+    margin-left: 50px;
+    font: 26px 'Oswald', sans-serif;
+    color: #29c5e6;
+
+}
+.rowlabel div{
+    display: inline-block;
+    color: #484747;
+    margin:10px 0px;
+    font: 16px 'Oswald', sans-serif;
+
+}
+.rowlabel > div+div{
+    margin-left: 100px;
+}
+.rowlabel div:first-of-type{
+    width: 300px;
+}
+
+.name{
+    font: 26px 'Oswald', sans-serif;
+    color: #919191;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: top;
+}
+
+.book div p {
+
+    font-size: 16px;
+
+    color: #8f8f8f;
+
+}
 
 footer {
     background: #7e7e7e;
     color: #dbdbdb;
     font-size: 11px;
 
-    position : fixed;
+    position : relative;
     height : 110px;
     width: 100%;
     bottom : 0;
@@ -146,6 +200,7 @@ footer {
     margin: auto;
     padding: 10px 0;
     height: 90px;
+
 }
 footer h3 {
     font: 14px 'Oswald', sans-serif;

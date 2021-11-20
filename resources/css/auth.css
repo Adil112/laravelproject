@@ -26,6 +26,8 @@ p {
 #wrapper {
     max-width: 1260px;
     margin: auto;
+
+    padding-bottom : 50px;
 }
 header {
     padding: 20px 0;
@@ -82,8 +84,46 @@ h1 {
 }
 
 
+.authorization input {
+    width: 250px;
+    height: 36px;
+    padding-left: 10px;
+    border: 1px solid #29c5e6;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    color: #919191;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 40%;
 
+}
+.authorization button {
+    margin-left: 10px;
+    top: 0;
+    right: 0px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background: #29c5e6;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 46.5%;
+    margin-bottom: 10px;
+}
+.authorization button:before {
+    content: "Войти";
+    font-family: SansSerif;
+    font-size: 16px;
+    color: #F9F0DA;
+}
 
+.authorization a{
+    font-family: SansSerif;
+    font-size: 16px;
+    color: #29c5e6;
+    margin-left: 47%;
+
+}
 
 
 
@@ -95,6 +135,11 @@ footer {
     background: #7e7e7e;
     color: #dbdbdb;
     font-size: 11px;
+
+    position : fixed;
+    height : 110px;
+    width: 100%;
+    bottom : 0;
 }
 #footer {
     max-width: 960px;

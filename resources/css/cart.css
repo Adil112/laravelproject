@@ -35,6 +35,19 @@ header {
 form[name="search"] {
     float: right;
 }
+.main{
+
+    width: 1260px;
+}
+.main div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contents{
+    width: 1000px;
+    margin: 0px;
+}
 nav a {
     text-decoration: none;
 }
@@ -94,14 +107,19 @@ h1 {
     display: inline-block;
     vertical-align: top;
 }
-.request{
-    display: inline-block;
+.req{
+    height: 300px;
     margin-left: 100px;
+    font: 16px 'Oswald', sans-serif;
 
 }
-.request div{
-    margin-bottom: 10px;
+.num{
+    color: #29c5e6;
 }
+.req div{
+    margin-bottom: 20px;
+}
+
 .content{
     margin-left: 50px;
 }
@@ -109,6 +127,7 @@ h1 {
 .row div{
     display: inline-block;
     vertical-align: top;
+
 }
 .row > div+div{
     margin-left: 100px;

@@ -13,7 +13,7 @@
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
         <div class="auth">
-            <a href="/"><img src="../images/user.png" width="40" height="40"></a>
+            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
             <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
         </div>
     </header>
@@ -30,8 +30,21 @@
         <h1>АВТОРИЗАЦИЯ</h1>
     </div>
 
-    <div class="auth">
-
+    <div>
+        <form class="authorization">
+            <div>
+                <input name="login" type="text" placeholder="Логин">
+            </div>
+            <div>
+                <input name="password" type="text" placeholder="Пароль">
+            </div>
+            <div>
+                <button type="submit"></button>
+            </div>
+            <div>
+                <a href="/registration">Регистрация</a>
+            </div>
+        </form>
     </div>
 
 

@@ -111,7 +111,7 @@ h1 {
     margin-bottom: 10px;
 }
 .authorization button:before {
-    content: "Войти";
+    content: "Регистрация";
     font-family: SansSerif;
     font-size: 16px;
     color: #F9F0DA;
@@ -121,15 +121,9 @@ h1 {
     font-family: SansSerif;
     font-size: 16px;
     color: #29c5e6;
-    margin-left: 47%;
+    margin-left: 48.5%;
 
 }
-
-
-
-
-
-
 
 footer {
     background: #7e7e7e;

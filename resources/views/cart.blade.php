@@ -46,68 +46,74 @@
                 Оформить заказ
             </div>
         </div>
-    <div class="content">
+    <div class="main">
+        <div class="contents">
+            <div class="content">
 
-            <div class="rows">
-                <div class="row">
-                    <div class="book">
-                        <div>
-                            <img src="../images/ex.png" width="150" height="250" alt="">
+                <div class="rows">
+                    <div class="row">
+                        <div class="book">
+                            <div>
+                                <img src="../images/ex.png" width="150" height="250" alt="">
+                            </div>
+                            <div>
+                                <b><a href="/" class="name">Название книги</a></b>
+                                <p>Автор</p>
+                                <p>Жанр</p>
+                                <p>Издатель</p>
+                                <p>Доступно</p>
+                                <p><button>Удалить</button></p>
+                            </div>
                         </div>
-                        <div>
-                            <b><a href="/" class="name">Название книги</a></b>
-                            <p>Автор</p>
-                            <p>Жанр</p>
-                            <p>Издатель</p>
-                            <p>Доступно</p>
-                            <p><button>Удалить</button></p>
-                        </div>
+                        <div>Цена</div>
+                        <div>Количество</div>
+                        <div>Сумма</div>
                     </div>
-                    <div>Цена</div>
-                    <div>Количество</div>
-                    <div>Сумма</div>
                 </div>
-            </div>
-            <div class="request">
-                <div class="reqinf">
-                    Инфа о заказе
-                </div>
-                <button>
-                    Оформить заказ
-                </button>
-            </div>
-        </div>
-    <div class="content">
 
-        <div class="rows">
-            <div class="row">
-                <div class="book">
-                    <div>
-                        <img src="../images/ex.png" width="150" height="250" alt="">
-                    </div>
-                    <div>
-                        <b><a href="/" class="name">Название книги</a></b>
-                        <p>Автор</p>
-                        <p>Жанр</p>
-                        <p>Издатель</p>
-                        <p>Доступно</p>
-                        <p><button>Удалить</button></p>
+            </div>
+            <div class="content">
+
+                <div class="rows">
+                    <div class="row">
+                        <div class="book">
+                            <div>
+                                <img src="../images/ex.png" width="150" height="250" alt="">
+                            </div>
+                            <div>
+                                <b><a href="/" class="name">Название книги</a></b>
+                                <p>Автор</p>
+                                <p>Жанр</p>
+                                <p>Издатель</p>
+                                <p>Доступно</p>
+                                <p><button>Удалить</button></p>
+                            </div>
+                        </div>
+                        <div>Цена</div>
+                        <div>Количество</div>
+                        <div>Сумма</div>
                     </div>
                 </div>
-                <div>Цена</div>
-                <div>Количество</div>
-                <div>Сумма</div>
             </div>
         </div>
-        <div class="request">
-            <div class="reqinf">
-                Инфа о заказе
+        <div class="req">
+            <div>
+                Сумма: <a class="num">2000</a>
+            </div><br/>
+            <div>
+                Кол-во товаров: 10
+            </div><br/>
+            <div>
+                    <button>
+                        Оформить заказ
+                    </button>
             </div>
-            <button>
-                Оформить заказ
-            </button>
+
         </div>
+
     </div>
+
+
 
 
 </div>
