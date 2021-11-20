@@ -22,6 +22,8 @@ mix.styles('resources/css/app.css', 'public/css/app.css')
 mix.styles('resources/css/apphome.css', 'public/css/apphome.css')
 mix.styles('resources/css/fonts.css', 'public/css/fonts.css')
 mix.styles('resources/css/filters.css', 'public/css/filters.css')
-
-
-
+mix.styles('resources/css/cart.css', 'public/css/cart.css')
+mix.styles('resources/css/contacts.css', 'public/css/contacts.css')
+mix.styles('resources/css/support.css', 'public/css/support.css')
+mix.styles('resources/css/book.css', 'public/css/book.css')
+mix.styles('resources/css/auth.css', 'public/css/auth.css')

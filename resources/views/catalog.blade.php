@@ -14,8 +14,8 @@
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
         <div class="auth">
-            <a href="/"><img src="../images/user.png" width="40" height="40"></a>
-            <a href="/"><img src="../images/shopping-cart.png" width="40" height="40"></a>
+            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
+            <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
         </div>
     </header>
     <nav>
@@ -114,7 +114,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
