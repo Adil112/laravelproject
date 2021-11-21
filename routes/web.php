@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/catalog', function () {
-    return view('catalog');
-});
+
 Route::get('/book', function () {
     return view('book');
 });
@@ -34,3 +32,4 @@ Route::get('/support', function () {
     return view('support');
 });
 
+Route::get('/catalog',  'App\Http\Controllers\CatalogController@index');

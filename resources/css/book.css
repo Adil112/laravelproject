@@ -96,7 +96,7 @@ h1 {
 .des{
     margin-left: 60px;
     font: 20px 'Oswald', sans-serif;
-
+    padding-bottom: 90px;
 }
 .des p:first-of-type{
     color: #29c5e6;

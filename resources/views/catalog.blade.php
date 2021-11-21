@@ -1,32 +1,10 @@
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Whitesquare</title>
+@extends('layouts.app')
+
+@section('maincss')
     <link rel="stylesheet" href="../css/app.css" type="text/css">
-    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
     <link rel="stylesheet" href="../css/filters.css" type="text/css">
-</head>
-<body>
-<div id="wrapper">
-    <header>
-        <div>
-            <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
-        </div>
-        <div class="auth">
-            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
-            <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
-        </div>
-    </header>
-    <nav>
-        <ul class="top-menu">
-            <li><a href="/">ГЛАВНАЯ</a></li>
-            <li><a href="/catalog">КАТАЛОГ</a></li>
-            <li><a href="/allrequest">ЗАКАЗЫ</a></li>
-            <li><a href="/support">ПОМОЩЬ</a></li>
-            <li><a href="/contacts">КОНТАКТЫ</a></li>
-        </ul>
-    </nav>
+@endsection
+@section('information')
     <div id="heading">
         <h1>КАТАЛОГ</h1>
     </div>
@@ -167,60 +145,17 @@
             </figure>
         </div>
         <div class="team-row">
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
+            @foreach($data as $el)
+                <figure>
+                    <img src="{{$el->Image}}" width="120" height="220" alt="">
+                    <figcaption>
+                        <a href="/">{{$el->Name}}</a>
+                        <span>{{$el->IdAuthor}}</span>
+                        <span>{{$el->IdPublisher}}, {{$el->Year}} г.</span>
+                        <span>{{$el->Price}} руб.</span>
+                    </figcaption>
+                </figure>
+            @endforeach
         </div>
         <div class="team-row">
             <figure>
@@ -279,38 +214,8 @@
             </figure>
         </div>
 
+
     </section>
-</div>
-<footer>
-    <div id="footer">
-        <div id="sitemap">
-            <h3>КАРТА САЙТА</h3>
-            <div>
-                <a href="/">ГЛАВНАЯ</a>
-                <a href="/catalog">КАТАЛОГ</a>
-                <a href="/allrequest">ЗАКАЗЫ</a>
-            </div>
-            <div>
-                <a href="/support">ПОМОЩЬ</a>
-                <a href="/contacts">КОНТАКТЫ</a>
-            </div>
-        </div>
-        <div id="social">
-            <h3>СОЦИАЛЬНЫЕ СЕТИ</h3>
-            <a href="/" class="social-icon twitter"></a>
-            <a href="/" class="social-icon facebook"></a>
-            <a href="/" class="social-icon google-plus"></a>
-            <a href="/" class="social-icon-small vimeo"></a>
-            <a href="/" class="social-icon-small youtube"></a>
-            <a href="/" class="social-icon-small flickr"></a>
-            <a href="/" class="social-icon-small instagram"></a>
-            <a href="/" class="social-icon-small rss"></a>
-        </div>
-        <div id="footer-logo">
-            <a href="/"><img src="../images/footer-logo.png" alt="Whitesquare logo"></a>
-            <p>Copyright © 2021 Whitesquare.</p>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+@endsection
+
+

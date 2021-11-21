@@ -3,6 +3,8 @@ body {
     font: 12px Tahoma, sans-serif;
     background-color: #f8f8f8;
     margin: 0;
+
+    height: 100%;
 }
 input[type="text"] {
     background-color: #f3f3f3;
@@ -26,12 +28,28 @@ p {
 #wrapper {
     max-width: 1260px;
     margin: auto;
+
+    height: 100%;
+    padding-bottom : 50px;
 }
 header {
     padding: 20px 0;
 }
 form[name="search"] {
     float: right;
+}
+.main{
+
+    width: 1260px;
+}
+.main div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contents{
+    width: 1000px;
+    margin: 0px;
 }
 nav a {
     text-decoration: none;
@@ -81,75 +99,25 @@ h1 {
     padding: 0 10px;
 }
 
-.content{
-    margin-left: 60px;
-    font: 20px 'Oswald', sans-serif;
-}
-.content div{
-    display: inline-block;
-    vertical-align: top;
 
-}
-.content div p{
-    margin-top: 0px;
-}
-.des{
-    margin-left: 60px;
-    font: 20px 'Oswald', sans-serif;
-    padding-bottom: 90px;
-}
-.des p:first-of-type{
-    color: #29c5e6;
-}
-.box select{
-    background-color: white;
-    color: #919191;
-    width: 50px;
-    height: 30px;
-    font-size: 20px;
-    -webkit-appearance: button;
-    outline: none;
-    border: 1px solid #29c5e6;
-    border-radius: 5px;
-}
-
-.req{
-    width: 200px;
-    height: 135px;
-    border: 1px solid #c9c7c7;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-.req p{
-    margin-left: 10px;
-}
-
-
-.filter{
-    vertical-align: top;
-}
-.info > p + p{
-    margin-top: 25px;
-}
-.info{
-    margin-left: 50px;
-    width: 700px;
-}
-
-.info p:first-of-type{
-  color: #29c5e6;
-}
 
 footer {
     background: #7e7e7e;
     color: #dbdbdb;
     font-size: 11px;
+
+    margin-top: -90px;
+
+    height : 110px;
+    width: 100%;
+    bottom : 0px;
 }
 #footer {
     max-width: 960px;
     margin: auto;
     padding: 10px 0;
     height: 90px;
+
 }
 footer h3 {
     font: 14px 'Oswald', sans-serif;
