@@ -144,7 +144,7 @@ footer a {
     display: inline-block;
 }
 #sitemap div + div {
-    margin-left: 40px;
+    margin-left: 10px;
 }
 #sitemap a {
     display: block;

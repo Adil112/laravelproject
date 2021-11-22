@@ -51,24 +51,32 @@
             <div class="content">
 
                 <div class="rows">
+                    @if(!is_null($request))
+                    @foreach($request->books_requests as $br)
                     <div class="row">
                         <div class="book">
                             <div>
                                 <img src="../images/ex.png" width="150" height="250" alt="">
                             </div>
                             <div>
-                                <b><a href="/" class="name">Название книги</a></b>
-                                <p>Автор</p>
-                                <p>Жанр</p>
-                                <p>Издатель</p>
-                                <p>Доступно</p>
+                                <b><a href="/" class="name">Название: {{$br->book->Name}}</a></b>
+                                <p> Автор: {{$br->book->author->Name}} {{$br->book->author->Surname}}</p>
+                                <p>Жанр: {{$br->book->genre->Name}}</p>
+                                <p>Издатель: {{$br->book->publisher->Name}}</p>
+                                <p>Доступно: {{$br->book->Quantity}}</p>
                                 <p><button>Удалить</button></p>
                             </div>
                         </div>
-                        <div>Цена</div>
-                        <div>Количество</div>
-                        <div>Сумма</div>
+                        <div>{{$br->book->Price}}</div>
+                        <div>{{$br->Quantity}}</div>
+                        <div>
+                            <script>
+                                document.write({{$br->book->Price}} * {{$br->Quantity}})
+                            </script>
+                        </div>
                     </div>
+                    @endforeach
+                    @endif
                 </div>
 
             </div>

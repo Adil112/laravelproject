@@ -129,10 +129,16 @@ h1 {
     vertical-align: top;
 
 }
-.row > div+div{
-    margin-left: 100px;
+.row > div+div {
+    margin-left: 110px;
     font: 16px 'Oswald', sans-serif;
     color: #29c5e6;
+}
+.row div:nth-child(3){
+    margin-left: 140px;
+}
+.row div:nth-child(4){
+    margin-left: 150px;
 }
 .rowlabel{
     margin-bottom: 20px;

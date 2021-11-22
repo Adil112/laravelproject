@@ -58,9 +58,7 @@ class CatalogController extends Controller
     public function authorization(){
         return view('authorization');
     }
-    public function cart(){
-        return view('cart');
-    }
+
     public function contacts(){
         return view('contacts');
     }
