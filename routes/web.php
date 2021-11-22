@@ -13,3 +13,4 @@ Route::get('/book/{IdBook}', 'App\Http\Controllers\CatalogController@book')->nam
 Route::get('/', 'App\Http\Controllers\CatalogController@home')->name('home');
 Route::get('/support', 'App\Http\Controllers\CatalogController@support')->name('support');
 Route::get('/catalog',  'App\Http\Controllers\CatalogController@catalog')->name('catalog');
+Route::get('/catalog/search',  'App\Http\Controllers\CatalogController@search')->name('search');

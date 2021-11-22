@@ -3,6 +3,7 @@
 @section('maincss')
     <link rel="stylesheet" href="../css/app.css" type="text/css">
     <link rel="stylesheet" href="../css/filters.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 @endsection
 @section('information')
     <div id="heading">
@@ -60,15 +61,15 @@
     </aside>
     <section>
         <div class="d1">
-            <form>
-                <input type="text" placeholder="Искать книгу...">
-                <button  type="submit"></button>
+            <form method="get" action="{{route('search')}}">
+                <input type="text" name="s" placeholder="{{$s}}">
+                <button  class="btn btn-info" type="submit"></button>
             </form>
         </div>
         <div class="team-row">
             @foreach($books as $el)
                 <figure>
-                    <img src="{{$el->Image}}" width="120" height="220" alt="">
+                    <img src="{{$el->Image}}" width="200" height="300" alt="">
                     <figcaption>
                         <a href="{{route('book', $el->IdBook)}}">{{$el->Name}}</a>
                         <span>{{$el->author->Surname}} {{$el->author->Name}}</span>
@@ -78,10 +79,11 @@
                 </figure>
             @endforeach
         </div>
-
-
-
+        {{$books->links()}}
     </section>
 @endsection
+
+
+
 
 

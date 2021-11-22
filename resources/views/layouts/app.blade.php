@@ -31,7 +31,6 @@
     @yield('information')
 
 </div>
-
 <footer>
     <div id="footer">
         <div id="sitemap">

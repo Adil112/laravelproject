@@ -30,21 +30,25 @@
                 @foreach($requests as $el)
                     <div class="megarow">
                         <div class="rows">
+                            @foreach($el->books_requests as $br)
                             <div class="data">{{$el->Date}}</div><br/>
                             <div class="row">
                                 <div class="book">
                                     <div>
-                                        <b><a href="/" class="name">Название книги</a></b>
+                                            <b><a href="/" class="name">{{$br->book->Name}}</a></b>
                                     </div>
                                 </div>
-                                <div>Цена</div>
-                                <div>Количество</div>
-                                <div>Сумма</div>
+                                <div>{{$br->book->Price}}</div>
+                                <div>{{$br->Quantity}}</div>
+                                <div>
+                                    <script>
+                                        document.write({{$br->book->Price}} * {{$br->Quantity}})
+                                     </script>
+                                </div>
                             </div>
-
-
+                            @endforeach
                         </div>
-                        <div class="price">{{$el->Price}}</div>
+                        <div class="price">{{$el->Price}} руб.</div>
                     </div>
                 @endforeach
 

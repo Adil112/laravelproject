@@ -31,35 +31,35 @@
     </div>
     <div class="content">
         <div class="image">
-            <img src="../images/ex.png" width="200" height="300" alt="">
+            <img src="{{$book->Image}}" width="200" height="300" alt="">
         </div>
         <div class="info">
             <p>
-                {{$book->Name}}
+                Название: {{$book->Name}}
             </p>
             <p>
-                Автор
+                Автор: {{$book->author->Name}} {{$book->author->Surname}}
             </p>
             <p>
-                Жанр
+                Жанр: {{$book->genre->Name}}
             </p>
             <p>
-                Оценка
+                Оценка: {{$book->Mark}}
             </p>
             <p>
-                Издательство
+                Издатель: {{$book->publisher->Name}}
             </p>
             <p>
-                Год
+                Год издания: {{$book->Year}} г.
             </p>
 
         </div>
         <div class="req">
             <p>
-                Цена
+                Цена: {{$book->Price}} руб.
             </p>
             <p>
-                Количество доступное
+                Доступно: {{$book->Quantity}} шт.
             </p>
             <p class="filter">
                 <div style="margin-left: 10px;">
@@ -82,7 +82,7 @@
     </div>
     <div class="des">
         <p>Описание</p>
-        <p>ОписаниеОписаниеОписаниеОписаниеОписание</p>
+        <p>{{$book->Description}}</p>
     </div>
 
 </div>

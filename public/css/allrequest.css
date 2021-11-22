@@ -28,6 +28,7 @@
     margin-left: 50px;
 }
 
+
 .row div{
     display: inline-block;
 
@@ -38,6 +39,10 @@
     font: 16px 'Oswald', sans-serif;
     margin-top: 10px;
 }
+.row div:nth-child(4){
+    margin-left:160px;
+}
+
 .rowlabel{
     margin-bottom: 20px;
     margin-left: 50px;
@@ -48,6 +53,8 @@
 }
 .megarow{
     width: 1000px;
+    border-bottom: 1px solid #919191;
+
 }
 .megarow div{
     display: inline-block;
@@ -79,18 +86,14 @@
     color: #919191;
     display: block;
     text-decoration: none;
-    text-align: center;
+    margin-left: 0px;
     vertical-align: top;
 }
 
 .book div p {
-
     font-size: 16px;
-
     color: #8f8f8f;
-
 }
-
 html {
     height: 100%;
 }
