@@ -88,6 +88,20 @@
                 <button  type="submit"></button>
             </form>
         </div>
+
+        <div class="team-row">
+            @foreach($books as $el)
+                <figure>
+                    <img src="{{$el->Image}}" width="120" height="220" alt="">
+                    <figcaption>
+                        <a href="{{route('book', $el->IdBook)}}">{{$el->Name}}</a>
+                        <span>{{$el->getAuthor()->Surname}} {{$el->getAuthor()->Name}}</span>
+                        <span>{{$el->getPublisher()->Name}}, {{$el->Year}} г.</span>
+                        <span>{{$el->Price}} руб.</span>
+                    </figcaption>
+                </figure>
+            @endforeach
+        </div>
         <div class="team-row">
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
@@ -101,7 +115,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -110,7 +124,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -119,7 +133,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -128,7 +142,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -137,7 +151,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -145,23 +159,10 @@
             </figure>
         </div>
         <div class="team-row">
-            @foreach($data as $el)
-                <figure>
-                    <img src="{{$el->Image}}" width="120" height="220" alt="">
-                    <figcaption>
-                        <a href="/">{{$el->Name}}</a>
-                        <span>{{$el->IdAuthor}}</span>
-                        <span>{{$el->IdPublisher}}, {{$el->Year}} г.</span>
-                        <span>{{$el->Price}} руб.</span>
-                    </figcaption>
-                </figure>
-            @endforeach
-        </div>
-        <div class="team-row">
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -170,7 +171,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -179,7 +180,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -188,7 +189,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -197,7 +198,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>
@@ -206,7 +207,7 @@
             <figure>
                 <img src="../images/ex.png" width="120" height="220" alt="">
                 <figcaption>
-                    <a href="/">Название</a>
+                    <a href="/book">Название</a>
                     <span>Автор</span>
                     <span>Издательство, год</span>
                     <span>Цена</span>

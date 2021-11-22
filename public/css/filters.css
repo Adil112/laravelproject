@@ -34,6 +34,9 @@
     border-radius: 8px;
     margin-bottom: 15px;
 }
+.filterbox:last-of-type{
+    padding-bottom: 90px;
+}
 #inputfilter{
     border: 1px solid #29c5e6;
     width: 50px;

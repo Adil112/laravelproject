@@ -14,17 +14,17 @@
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
         <div class="auth">
-            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
-            <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
+            <a href="{{route('authorization')}}"><img src="../images/user.png" width="40" height="40"></a>
+            <a href="{{route('cart')}}"><img src="../images/shopping-cart.png" width="40" height="40"></a>
         </div>
     </header>
     <nav>
         <ul class="top-menu">
-            <li><a href="/">ГЛАВНАЯ</a></li>
-            <li><a href="/catalog">КАТАЛОГ</a></li>
-            <li><a href="/allrequest">ЗАКАЗЫ</a></li>
-            <li><a href="/support">ПОМОЩЬ</a></li>
-            <li><a href="/contacts">КОНТАКТЫ</a></li>
+            <li><a href="{{route('home')}}">ГЛАВНАЯ</a></li>
+            <li><a href="{{route('catalog')}}">КАТАЛОГ</a></li>
+            <li><a href="{{route('allrequest')}}">ЗАКАЗЫ</a></li>
+            <li><a href="{{route('support')}}">ПОМОЩЬ</a></li>
+            <li><a href="{{route('contacts')}}">КОНТАКТЫ</a></li>
         </ul>
     </nav>
 
@@ -37,13 +37,13 @@
         <div id="sitemap">
             <h3>КАРТА САЙТА</h3>
             <div>
-                <a href="/">ГЛАВНАЯ</a>
-                <a href="/catalog">КАТАЛОГ</a>
-                <a href="/allrequest">ЗАКАЗЫ</a>
+                <a href="{{route('home')}}">ГЛАВНАЯ</a>
+                <a href="{{route('catalog')}}">КАТАЛОГ</a>
+                <a href="{{route('allrequest')}}">ЗАКАЗЫ</a>
             </div>
             <div>
-                <a href="/support">ПОМОЩЬ</a>
-                <a href="/contacts">КОНТАКТЫ</a>
+                <a href="{{route('support')}}">ПОМОЩЬ</a>
+                <a href="{{route('contacts')}}">КОНТАКТЫ</a>
             </div>
         </div>
         <div id="social">

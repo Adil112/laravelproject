@@ -35,7 +35,7 @@
         </div>
         <div class="info">
             <p>
-                Название
+                {{$book->Name}}
             </p>
             <p>
                 Автор
