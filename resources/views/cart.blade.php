@@ -72,29 +72,7 @@
                 </div>
 
             </div>
-            <div class="content">
 
-                <div class="rows">
-                    <div class="row">
-                        <div class="book">
-                            <div>
-                                <img src="../images/ex.png" width="150" height="250" alt="">
-                            </div>
-                            <div>
-                                <b><a href="/" class="name">Название книги</a></b>
-                                <p>Автор</p>
-                                <p>Жанр</p>
-                                <p>Издатель</p>
-                                <p>Доступно</p>
-                                <p><button>Удалить</button></p>
-                            </div>
-                        </div>
-                        <div>Цена</div>
-                        <div>Количество</div>
-                        <div>Сумма</div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="req">
             <div>

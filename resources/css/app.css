@@ -4,18 +4,11 @@ aside {
     width: 250px;
 
 }
-aside div:last-child{
-    padding-bottom: 90px;
-}
 
 section {
     margin-left: 280px;
-
 }
 
-section div:last-child{
-    padding-bottom: 90px;
-}
 blockquote {
     margin: 0;
     background: #29c5e6;
@@ -76,11 +69,19 @@ figure figcaption span {
     color: #8f8f8f;
     margin: 0px;
 }
+.team-row:last-of-type{
+    padding-bottom: 90px;
+}
+
 .team-row figure {
     margin-top: 20px;
 }
 .team-row figure + figure {
     margin-left: 43px;
+}
+.team-row figure:nth-child(7)
+{
+    margin-left: 0px;
 }
 
 
@@ -112,3 +113,23 @@ figure figcaption span {
     color: #F9F0DA;
 }
 
+body{
+    height: 100%;
+}
+wrapper{
+    position: relative;
+    min-height: 100%;
+}
+
+section{
+    padding-bottom: 90px;
+
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}

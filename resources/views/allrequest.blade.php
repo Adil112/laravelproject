@@ -27,80 +27,30 @@
     <div class="main">
         <div class="contents">
             <div class="content">
-                <div class="megarow">
-                    <div class="rows">
-                        <div class="data">Дата заказа</div><br/>
-                        <div class="row">
-                            <div class="book">
-                                <div>
-                                    <b><a href="/" class="name">Название книги</a></b>
+                @foreach($requests as $el)
+                    <div class="megarow">
+                        <div class="rows">
+                            <div class="data">{{$el->Date}}</div><br/>
+                            <div class="row">
+                                <div class="book">
+                                    <div>
+                                        <b><a href="/" class="name">Название книги</a></b>
+                                    </div>
                                 </div>
+                                <div>Цена</div>
+                                <div>Количество</div>
+                                <div>Сумма</div>
                             </div>
-                            <div>Цена</div>
-                            <div>Количество</div>
-                            <div>Сумма</div>
+
+
                         </div>
-                        <div class="row">
-                            <div class="book">
-                                <div>
-                                    <b><a href="/" class="name">Название книги</a></b>
-                                </div>
-                            </div>
-                            <div>Цена</div>
-                            <div>Количество</div>
-                            <div>Сумма</div>
-                        </div>
-                        <div class="row">
-                            <div class="book">
-                                <div>
-                                    <b><a href="/" class="name">Название книги</a></b>
-                                </div>
-                            </div>
-                            <div>Цена</div>
-                            <div>Количество</div>
-                            <div>Сумма</div>
-                        </div>
+                        <div class="price">{{$el->Price}}</div>
                     </div>
-                    <div class="price">Итоговая цена</div>
-                </div>
-                <div class="megarow">
-                    <div class="rows">
-                        <div class="data">Дата заказа</div><br/>
-                        <div class="row">
-                            <div class="book">
-                                <div>
-                                    <b><a href="/" class="name">Название книги</a></b>
-                                </div>
-                            </div>
-                            <div>Цена</div>
-                            <div>Количество</div>
-                            <div>Сумма</div>
-                        </div>
-                        <div class="row">
-                            <div class="book">
-                                <div>
-                                    <b><a href="/" class="name">Название книги</a></b>
-                                </div>
-                            </div>
-                            <div>Цена</div>
-                            <div>Количество</div>
-                            <div>Сумма</div>
-                        </div>
-                        <div class="row">
-                            <div class="book">
-                                <div>
-                                    <b><a href="/" class="name">Название книги</a></b>
-                                </div>
-                            </div>
-                            <div>Цена</div>
-                            <div>Количество</div>
-                            <div>Сумма</div>
-                        </div>
-                    </div>
-                    <div class="price">Итоговая цена</div>
-                </div>
+                @endforeach
+
 
             </div>
+
         </div>
     </div>
 @endsection

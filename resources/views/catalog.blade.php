@@ -14,10 +14,9 @@
             <div class="box">
                 <select>
                     <option>Все жанры</option>
-                    <option>Комедия</option>
-                    <option>Драма</option>
-                    <option>Классика</option>
-                    <option>История</option>
+                    @foreach($genres as $el)
+                        <option>{{$el->Name}}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -26,10 +25,9 @@
             <div class="box">
                 <select>
                     <option>Все издатели</option>
-                    <option>АСТ</option>
-                    <option>Феникс</option>
-                    <option>Азбука</option>
-                    <option>Фламинго</option>
+                    @foreach($pubs as $el)
+                        <option>{{$el->Name}}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -38,8 +36,9 @@
             <div class="box">
                 <select>
                     <option>Все авторы</option>
-                    <option>Лев Толстой</option>
-                    <option>Александр Пушкин</option>
+                    @foreach($authors as $el)
+                        <option>{{$el->Name}} {{$el->Surname}} </option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -47,38 +46,16 @@
             <label class="labelfilter">Цена</label>
             <p>
                 <label >&nbsp&nbspот&nbsp;
-                    <input id="inputfilter"  type="text"  value="" autocomplete="off" placeholder="200" size="4">
+                    <input id="inputfilter"  type="text"  value="" autocomplete="off" placeholder="{{$minPrice}}" size="4">
                 </label>
                 <label >до&nbsp;
-                    <input id="inputfilter" type="text"  value="" autocomplete="off" placeholder="5000" size="4">
+                    <input id="inputfilter" type="text"  value="" autocomplete="off" placeholder="{{$maxPrice}}" size="4">
                 </label>
                 <button id="buttonfilter">Применить</button>
             </p>
         </div>
-        <div class="filterbox">
-            <label class="labelfilter">Год</label>
-            <p>
-                <label >&nbsp&nbspот&nbsp;
-                    <input id="inputfilter"  type="text"  value="" autocomplete="off" placeholder="1965" size="4">
-                </label>
-                <label >до&nbsp;
-                    <input id="inputfilter" type="text"  value="" autocomplete="off" placeholder="2021" size="4">
-                </label>
-                <button id="buttonfilter">Применить</button>
-            </p>
-        </div>
-        <div class="filterbox">
-            <label class="labelfilter">Оценка</label>
-            <p>
-                <label >&nbsp&nbspот&nbsp;
-                    <input id="inputfilter"  type="text"  value="" autocomplete="off" placeholder="0" size="4">
-                </label>
-                <label >до&nbsp;
-                    <input id="inputfilter" type="text"  value="" autocomplete="off" placeholder="5" size="4">
-                </label>
-                <button id="buttonfilter">Применить</button>
-            </p>
-        </div>
+
+
 
     </aside>
     <section>
@@ -88,132 +65,20 @@
                 <button  type="submit"></button>
             </form>
         </div>
-
         <div class="team-row">
             @foreach($books as $el)
                 <figure>
                     <img src="{{$el->Image}}" width="120" height="220" alt="">
                     <figcaption>
                         <a href="{{route('book', $el->IdBook)}}">{{$el->Name}}</a>
-                        <span>{{$el->getAuthor()->Surname}} {{$el->getAuthor()->Name}}</span>
-                        <span>{{$el->getPublisher()->Name}}, {{$el->Year}} г.</span>
+                        <span>{{$el->author->Surname}} {{$el->author->Name}}</span>
+                        <span>{{$el->publisher->Name}}, {{$el->Year}} г.</span>
                         <span>{{$el->Price}} руб.</span>
                     </figcaption>
                 </figure>
             @endforeach
         </div>
-        <div class="team-row">
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-        </div>
-        <div class="team-row">
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../images/ex.png" width="120" height="220" alt="">
-                <figcaption>
-                    <a href="/book">Название</a>
-                    <span>Автор</span>
-                    <span>Издательство, год</span>
-                    <span>Цена</span>
-                </figcaption>
-            </figure>
-        </div>
+
 
 
     </section>
