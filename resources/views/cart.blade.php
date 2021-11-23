@@ -3,8 +3,9 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Whitesquare</title>
-    <link rel="stylesheet" href="../css/cart.css" type="text/css">
-    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+
+    <link rel="stylesheet" href="..\css\cart.css" type="text/css">
+    <link rel="stylesheet" href="..\css\fonts.css" type="text/css">
 </head>
 <body>
 <div id="wrapper">
@@ -64,7 +65,10 @@
                                 <p>Жанр: {{$br->book->genre->Name}}</p>
                                 <p>Издатель: {{$br->book->publisher->Name}}</p>
                                 <p>Доступно: {{$br->book->Quantity}}</p>
-                                <p><button>Удалить</button></p>
+                                <form action="{{route('cart-remove', $br->book->IdBook)}}" method="POST">
+                                    <p><button type="submit" href="">Удалить</button></p>
+                                    @csrf
+                                </form>
                             </div>
                         </div>
                         <div>{{$br->book->Price}}</div>

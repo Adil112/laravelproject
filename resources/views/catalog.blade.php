@@ -79,7 +79,7 @@
                 </figure>
             @endforeach
         </div>
-        {{$books->links()}}
+        {{$books->links('pagination::bootstrap-4')}}
     </section>
 @endsection
 

@@ -61,12 +61,13 @@
             <p>
                 Доступно: {{$book->Quantity}} шт.
             </p>
-            <form action="{{route('cart-add')}}" method="POST">
-                <input name="id" type="hidden" value="{{$book->IdBook}}">
+
+            <form action="{{route('cart-add', $book->IdBook)}}" method="POST">
             <p class="filter">
                 <div style="margin-left: 10px;">
                    Количество:
                 </div>
+
                 <div class="box">
                     <select name="num">
                         <option value="1">1</option>
@@ -74,10 +75,10 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-
                     </select>
-            </div>
+                </div>
             </p>
+
             <p>
                 <button type="submit">Добавить в корзину</button>
                 @csrf

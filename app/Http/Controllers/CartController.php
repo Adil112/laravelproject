@@ -23,17 +23,17 @@ class CartController extends Controller
         return view('cart', compact('request'));
     }
 
-    public function cartAdd(Request $req2)
+    public function cartAdd($IdBook, Request $req2)
     {
 
         $count = $req2->num;
-        $id = $req2->id;
+        //$id = $req2->id;
+        $id = $IdBook;
         $requestId = session('req');
-
         if(is_null($requestId))
         {
             $request = Requests::create()->id;
-            session(['req' => $request->id]);
+            session(['req' => $request]);
 
         }
         else{
@@ -48,5 +48,19 @@ class CartController extends Controller
 
         return view('cart', compact('request'));
     }
+
+    public function cartRemove($IdBook)
+    {
+        $requestId = session('req');
+        if(is_null($requestId))
+        {
+            $request = null;
+            return view('cart', compact('request'));
+        }
+        $request = Requests::where('IdRequest', $requestId)->first();
+        //$request->books_requests()->detach($IdBook); удалить запись с книгой из промежуточной таблицы
+        return view('cart', compact('request'));
+    }
+
 
 }
