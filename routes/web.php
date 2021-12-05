@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/contacts', 'App\Http\Controllers\CatalogController@contacts')->name('contacts');
 Route::get('/cart', 'App\Http\Controllers\CartController@cart')->name('cart');
+Route::get('/requestconfirm', 'App\Http\Controllers\CartController@reqConf')->name('reqConf');
+Route::post('/requestconfirm', 'App\Http\Controllers\CartController@requestConfirm')->name('request-confirm');
 Route::post('/cart/add/{IdBook}',  'App\Http\Controllers\CartController@cartAdd')->name('cart-add');
 Route::post('/cart/remove/{IdBook}',  'App\Http\Controllers\CartController@cartRemove')->name('cart-remove');
 Route::get('/authorization', 'App\Http\Controllers\CatalogController@authorization')->name('authorization');

@@ -88,15 +88,16 @@
         </div>
         <div class="req">
             <div>
-                Сумма: <a class="num">2000</a>
+                Сумма: <a class="num">{{$request->calculate()}}</a>
             </div><br/>
             <div>
-                Кол-во товаров: 10
+                Кол-во товаров: {{$request->counting()}}
             </div><br/>
             <div>
-                    <button>
-                        Оформить заказ
-                    </button>
+                <form action="{{route('reqConf')}}" method="GET">
+                    <p><button type="submit" href="">Оформить заказ</button></p>
+                    @csrf
+                </form>
             </div>
 
         </div>

@@ -13,4 +13,5 @@ class AllRequestController extends Controller
         $requests = Requests::get();
         return view('allrequest', compact('requests'));
     }
+
 }

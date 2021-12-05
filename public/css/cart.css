@@ -156,14 +156,14 @@ h1 {
 
 }
 .rowlabel > div+div{
-    margin-left: 100px;
+    margin-left: 80px;
 }
 .rowlabel div:first-of-type{
     width: 500px;
 }
 
 .name{
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 300;
     color: #29c5e6;
     display: block;
@@ -178,6 +178,23 @@ h1 {
     color: #8f8f8f;
 
 }
+
+.alert {
+    position:relative;
+    padding:1rem 1rem;
+    margin-bottom:1rem;
+    border:1px solid transparent;
+    border-radius:.25rem
+}
+.alert-success{
+    color:#0f5132;
+    background-color:#d1e7dd;
+    border-color:#badbcc
+}
+.alert-success {
+    color:#0c4128
+}
+
 
 footer {
     background: #7e7e7e;

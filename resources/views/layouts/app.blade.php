@@ -13,6 +13,7 @@
         <div>
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
+
         <div class="auth">
             <a href="{{route('authorization')}}"><img src="../images/user.png" width="40" height="40"></a>
             <a href="{{route('cart')}}"><img src="../images/shopping-cart.png" width="40" height="40"></a>
@@ -27,7 +28,11 @@
             <li><a href="{{route('contacts')}}">КОНТАКТЫ</a></li>
         </ul>
     </nav>
-
+    <div>
+        @if(session()->has('success'))
+            <p class="alert alert-success">{{session()->get('success')}}</p>
+        @endif
+    </div>
     @yield('information')
 
 </div>
