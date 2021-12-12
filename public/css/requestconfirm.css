@@ -144,6 +144,19 @@ h1 {
     font-family: SansSerif;
     font-size: 16px;
 }
+.address input {
+    background-color: red;
+    color: #919191;
+    width: 273px;
+    height: 36px;
+    -webkit-appearance: button;
+    outline: none;
+    border: 1px solid #29c5e6;
+    border-radius: 5px;
+    margin-left: 40%;
+    font-family: SansSerif;
+    font-size: 16px;
+}
 
 
 

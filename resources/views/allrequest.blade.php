@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.application')
 
 @section('maincss')
     <link rel="stylesheet" href="../css/allrequest.css" type="text/css">

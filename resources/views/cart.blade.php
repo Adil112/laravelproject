@@ -14,7 +14,7 @@
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
         <div class="auth">
-            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
+            <a href="/register"><img src="../images/user.png" width="40" height="40"></a>
             <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
         </div>
     </header>
@@ -57,7 +57,7 @@
                     <div class="row">
                         <div class="book">
                             <div>
-                                <img src="../images/ex.png" width="150" height="250" alt="">
+                                <img src="{{$br->book->Image}}" width="150" height="250" alt="">
                             </div>
                             <div>
                                 <b><a href="/" class="name">Название: {{$br->book->Name}}</a></b>

@@ -1,71 +1,83 @@
 <!doctype html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Whitesquare</title>
-    @yield('maincss')
-    <link rel="stylesheet" href="../css/fh.css" type="text/css">
-    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="wrapper">
-    <header>
-        <div>
-            <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
-        </div>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="auth">
-            <a href="{{route('authorization')}}"><img src="../images/user.png" width="40" height="40"></a>
-            <a href="{{route('cart')}}"><img src="../images/shopping-cart.png" width="40" height="40"></a>
-        </div>
-    </header>
-    <nav>
-        <ul class="top-menu">
-            <li><a href="{{route('home')}}">ГЛАВНАЯ</a></li>
-            <li><a href="{{route('catalog')}}">КАТАЛОГ</a></li>
-            <li><a href="{{route('allrequest')}}">ЗАКАЗЫ</a></li>
-            <li><a href="{{route('support')}}">ПОМОЩЬ</a></li>
-            <li><a href="{{route('contacts')}}">КОНТАКТЫ</a></li>
-        </ul>
-    </nav>
-    <div>
-        @if(session()->has('success'))
-            <p class="alert alert-success">{{session()->get('success')}}</p>
-        @endif
-    </div>
-    @yield('information')
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
 
-</div>
-<footer>
-    <div id="footer">
-        <div id="sitemap">
-            <h3>КАРТА САЙТА</h3>
-            <div>
-                <a href="{{route('home')}}">ГЛАВНАЯ</a>
-                <a href="{{route('catalog')}}">КАТАЛОГ</a>
-                <a href="{{route('allrequest')}}">ЗАКАЗЫ</a>
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
             </div>
-            <div>
-                <a href="{{route('support')}}">ПОМОЩЬ</a>
-                <a href="{{route('contacts')}}">КОНТАКТЫ</a>
-            </div>
-        </div>
-        <div id="social">
-            <h3>СОЦИАЛЬНЫЕ СЕТИ</h3>
-            <a href="/" class="social-icon twitter"></a>
-            <a href="/" class="social-icon facebook"></a>
-            <a href="/" class="social-icon google-plus"></a>
-            <a href="/" class="social-icon-small vimeo"></a>
-            <a href="/" class="social-icon-small youtube"></a>
-            <a href="/" class="social-icon-small flickr"></a>
-            <a href="/" class="social-icon-small instagram"></a>
-            <a href="/" class="social-icon-small rss"></a>
-        </div>
-        <div id="footer-logo">
-            <a href="/"><img src="../images/footer-logo.png" alt="Whitesquare logo"></a>
-            <p>Copyright © 2021 Whitesquare.</p>
-        </div>
+        </nav>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
     </div>
-</footer>
 </body>
 </html>

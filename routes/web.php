@@ -19,3 +19,20 @@ Route::get('/support', 'App\Http\Controllers\CatalogController@support')->name('
 Route::get('/catalog',  'App\Http\Controllers\CatalogController@catalog')->name('catalog');
 Route::get('/catalog/search',  'App\Http\Controllers\CatalogController@search')->name('search');
 
+Route::get('/logout, Auth\LoginController@logout')->name('get-logout');
+
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    'verify' => false,
+]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

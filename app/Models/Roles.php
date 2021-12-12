@@ -10,6 +10,6 @@ class Roles extends Model
     use HasFactory;
     public function users(): \Illuminate\Database\Eloquent\Relations\hasMany
     {
-        return $this->hasMany(MyUser::class, 'IdRole', 'IdRole');
+        return $this->hasMany(User::class, 'IdRole', 'IdRole');
     }
 }

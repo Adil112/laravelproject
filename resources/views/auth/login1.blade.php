@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Whitesquare</title>
-    <link rel="stylesheet" href="../css/reg.css" type="text/css">
+    <link rel="stylesheet" href="../css/auth.css" type="text/css">
     <link rel="stylesheet" href="../css/fonts.css" type="text/css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
         <div class="auth">
-            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
+            <a href="/register"><img src="../images/user.png" width="40" height="40"></a>
             <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
         </div>
     </header>
@@ -27,7 +27,7 @@
         </ul>
     </nav>
     <div id="heading">
-        <h1>Регистрация</h1>
+        <h1>АВТОРИЗАЦИЯ</h1>
     </div>
 
     <div>
@@ -36,19 +36,13 @@
                 <input name="login" type="text" placeholder="Логин">
             </div>
             <div>
-                <input name="phone" type="text" placeholder="Телефон">
-            </div>
-            <div>
-                <input name="mail" type="text" placeholder="Почта">
-            </div>
-            <div>
                 <input name="password" type="text" placeholder="Пароль">
             </div>
             <div>
                 <button type="submit"></button>
             </div>
             <div>
-                <a href="/authorization">Войти</a>
+                <a href="/register">Регистрация</a>
             </div>
         </form>
     </div>

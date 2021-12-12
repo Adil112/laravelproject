@@ -13,7 +13,7 @@
             <a href="/"><img src="../images/logo.png" alt="Whitesquare logo"> </a>
         </div>
         <div class="auth">
-            <a href="/authorization"><img src="../images/user.png" width="40" height="40"></a>
+            <a href="/register"><img src="../images/user.png" width="40" height="40"></a>
             <a href="/cart"><img src="../images/shopping-cart.png" width="40" height="40"></a>
         </div>
     </header>
