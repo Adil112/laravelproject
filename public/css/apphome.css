@@ -10,6 +10,25 @@ blockquote {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
+.search-box{
+    width:650px;
+}
+.search1 {
+    display: inline-block;
+    vertical-align: top;
+}
+.search1 input{
+    width: 400px;
+}
+.search2 {
+    display: inline-block;
+    vertical-align: top;
+}
+.search2 button{
+    width: 100px;
+    color: white;
+}
+
 blockquote p {
     color: #fff;
     font-style: italic;
@@ -69,3 +88,4 @@ figure figcaption span {
 .team-row figure + figure {
     margin-left: 43px;
 }
+

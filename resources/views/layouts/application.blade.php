@@ -6,6 +6,9 @@
     @yield('maincss')
     <link rel="stylesheet" href="../css/fh.css" type="text/css">
     <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <script src="https://kit.fontawesome.com/55bd70fc93.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -16,13 +19,17 @@
 
         <div class="auth">
             @auth
-                <a href="{{route('get-logout')}}"><img src="../images/logout-32.png" width="40" height="40"></a>
+                <a href="{{route('get-logout')}}"><span class="fas fa-sign-out-alt"></span></a>
             @endauth
-            @guest
-                    <a href="{{route('register')}}"><img src="../images/user.png" width="40" height="40"></a>
+            <div style="vertical-align: top">
+                @guest
+                    <a href="{{route('login')}}"><span class="fas fa-sign-in-alt"></span></a>
+                    <a href="{{route('register')}}"><span class="far fa-user-circle"></span></a>
                 @endguest
 
-            <a href="{{route('cart')}}"><img src="../images/shopping-cart.png" width="40" height="40"></a>
+                <a href="{{route('cart')}}"><span class="fas fa-shopping-bag"></span></a>
+            </div>
+
         </div>
     </header>
     <nav>

@@ -1,60 +1,35 @@
-body {
-    color: #8f8f8f;
-    font: 12px Tahoma, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-}
-input[type="text"] {
-    background-color: #f3f3f3;
-    border: 1px solid #e7e7e7;
-    height: 30px;
-    color: #b2b2b2;
-    padding: 0 10px;
-    vertical-align: top;
-}
-button {
-    color: #fff;
-    background-color: #29c5e6;
-    border: none;
-    height: 32px;
-    font-family: 'Oswald', sans-serif;
-}
-p {
-    margin: 20px 0;
-    font-size: 20px;
-}
-#wrapper {
-    max-width: 1260px;
-    margin: auto;
 
-    padding-bottom : 50px;
-}
-header {
-    padding: 20px 0;
-}
-form[name="search"] {
-    float: right;
-}
-nav a {
-    text-decoration: none;
-}
-nav ul {
-    margin: 0;
-    padding: 0;
-}
-nav li {
-    list-style-position: inside;
-    font: 24px 'Oswald', sans-serif;
-    padding: 10px;
-}
 header div{
     display: inline-block;
 }
+header {
+    padding: 20px 0;
+    width: 1260px;
+}
 .auth {
-    margin-left: 960px;
+    margin-left: 750px;
+    vertical-align: top;
 }
 .auth a {
     margin: 0 10px;
+}
+.fa-sign-in-alt
+{
+    font-size: 50px;
+    color: #29c5e6;
+}
+.fa-sign-out-alt{
+    font-size: 50px;
+    color: #29c5e6;
+    text-align: match-parent;
+}
+.fa-user-circle{
+    font-size: 50px;
+    color: #29c5e6;
+}
+.fa-shopping-bag{
+    font-size: 50px;
+    color: #29c5e6;
 }
 
 .top-menu li {
@@ -134,7 +109,7 @@ h1 {
 .box select {
     background-color: white;
     color: #919191;
-    width: 273px;
+    width: 295px;
     height: 36px;
     -webkit-appearance: button;
     outline: none;
@@ -143,132 +118,28 @@ h1 {
     margin-left: 40%;
     font-family: SansSerif;
     font-size: 16px;
+    margin-top: 10px;
 }
 .address input {
-    background-color: red;
-    color: #919191;
+    background-color: white !important;
+    color: #919191 !important;
     width: 273px;
     height: 36px;
     -webkit-appearance: button;
     outline: none;
-    border: 1px solid #29c5e6;
+    border: 1px solid #29c5e6 !important;
     border-radius: 5px;
     margin-left: 40%;
     font-family: SansSerif;
     font-size: 16px;
+
+}
+.mybutton{
+    margin-left: 40%;
 }
 
 
 
 
-
-
-
-footer {
-    background: #7e7e7e;
-    color: #dbdbdb;
-    font-size: 11px;
-
-    position : fixed;
-    height : 110px;
-    width: 100%;
-    bottom : 0;
-}
-#footer {
-    max-width: 960px;
-    margin: auto;
-    padding: 10px 0;
-    height: 90px;
-}
-footer h3 {
-    font: 14px 'Oswald', sans-serif;
-    color: #fff;
-    border-bottom: 1px solid #919191;
-    margin: 0 0 10px 0;
-}
-#twitter time a {
-    color: #b4aeae;
-}
-footer p {
-    margin: 5px 0;
-}
-footer a {
-    color: #dbdbdb;
-}
-#sitemap {
-    width: 160px;
-    float: left;
-    margin-left: 130px;
-    padding-right: 15px;
-}
-#sitemap div {
-    display: inline-block;
-}
-#sitemap div + div {
-    margin-left: 40px;
-}
-#sitemap a {
-    display: block;
-    text-decoration: none;
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-#social {
-    float: left;
-    margin-left: 160px;
-    width: 160px;
-}
-.social-icon {
-    width: 30px;
-    height: 30px;
-    background: url(../images/social.png) no-repeat;
-    display: inline-block;
-    margin-right: 21px;
-}
-.social-icon-small  {
-    width: 16px;
-    height: 16px;
-    background: url(../images/social-small.png) no-repeat;
-    display: inline-block;
-    margin: 5px 12px 0 0;
-}
-.twitter {
-    background-position: 0 0;
-}
-
-.facebook {
-    background-position: -30px 0;
-}
-
-.google-plus {
-    background-position: -60px 0;
-}
-
-.vimeo {
-    background-position: 0 0;
-}
-
-.youtube {
-    background-position: -16px 0;
-}
-
-.flickr {
-    background-position: -32px 0;
-}
-
-.instagram {
-    background-position: -48px 0;
-}
-
-.rss {
-    background-position: -64px 0;
-}
-#footer-logo {
-    float: left;
-    margin-top: 20px;
-    margin-left: 50px;
-    font-size: 10px;
-    text-align: right;
-}
 
 
