@@ -110,7 +110,7 @@ h1 {
     background-color: white;
     color: #919191;
     width: 295px;
-    height: 36px;
+    height: 34px;
     -webkit-appearance: button;
     outline: none;
     border: 1px solid #29c5e6;
@@ -118,7 +118,6 @@ h1 {
     margin-left: 40%;
     font-family: SansSerif;
     font-size: 16px;
-    margin-top: 10px;
 }
 .address input {
     background-color: white !important;
@@ -132,6 +131,7 @@ h1 {
     margin-left: 40%;
     font-family: SansSerif;
     font-size: 16px;
+    margin-bottom: 10px;
 
 }
 .mybutton{

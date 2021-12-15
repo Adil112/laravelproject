@@ -1,6 +1,5 @@
 
 section {
-    margin-left: 280px;
     padding-bottom: 90px;
 }
 blockquote {
@@ -11,14 +10,15 @@ blockquote {
     font-weight: 300;
 }
 .search-box{
-    width:650px;
+    width:870px;
 }
 .search1 {
     display: inline-block;
     vertical-align: top;
 }
 .search1 input{
-    width: 400px;
+    width: 720px;
+    height: 32px !important;
 }
 .search2 {
     display: inline-block;
@@ -27,6 +27,10 @@ blockquote {
 .search2 button{
     width: 100px;
     color: white;
+    vertical-align: center;
+}
+.btn {
+    padding: 0 !important;
 }
 
 blockquote p {
@@ -56,7 +60,7 @@ figure img {
 }
 
 section > figure + figure {
-    margin-left: 15px;
+    margin-left: 10px;
 }
 section > h2 {
     background: #29c5e6;
@@ -87,5 +91,9 @@ figure figcaption span {
 }
 .team-row figure + figure {
     margin-left: 43px;
+}
+.fa-plus-square{
+    font-size: 34px;
+    color: #29c5e6;
 }
 

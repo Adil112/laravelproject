@@ -102,6 +102,7 @@ class CartController extends Controller
         $request->Status = 1;
         $request->Price = $fullPrice;
         $request->Address = $req->address;
+        $request->Phone = $req->phone;
         $request->IdPay = $IdPay;
         $request->save();
 

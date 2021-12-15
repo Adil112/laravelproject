@@ -121,3 +121,9 @@ h1 {
 .mybutton{
     margin-top: 20px !important;
 }
+.fa-edit{
+    color: #29c5e6;
+}
+.fa-trash-alt{
+    color: #29c5e6;
+}

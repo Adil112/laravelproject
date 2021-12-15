@@ -27,6 +27,9 @@
             <div class="address">
                 <input name="address" type="text" placeholder="Адрес">
             </div>
+            <div class="address">
+                <input name="phone" type="text" placeholder="Номер телефона">
+            </div>
             <div class="box">
                 <select name="option">
                     @foreach($pays as $el)

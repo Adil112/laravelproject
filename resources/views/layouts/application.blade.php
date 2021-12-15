@@ -34,17 +34,24 @@
     </header>
     <nav>
         <ul class="top-menu">
-            <li><a href="{{route('home')}}">ГЛАВНАЯ</a></li>
+            <li><a href="{{route('myhome')}}">ГЛАВНАЯ</a></li>
             <li><a href="{{route('catalog')}}">КАТАЛОГ</a></li>
-            <li><a href="{{route('allrequest')}}">ЗАКАЗЫ</a></li>
             <li><a href="{{route('support')}}">ПОМОЩЬ</a></li>
             <li><a href="{{route('contacts')}}">КОНТАКТЫ</a></li>
+            <br/>
+            @auth
+                <li><a href="{{route('allrequest')}}">ЗАКАЗЫ</a></li>
+                <li><a href="{{route('user')}}">Пользователи</a></li>
+            @endauth
         </ul>
     </nav>
     <div>
         @if(session()->has('success'))
             <p class="alert alert-success">{{session()->get('success')}}</p>
         @endif
+            @if(session()->has('warning'))
+                <p class="alert alert-warning">{{session()->get('warning')}}</p>
+            @endif
     </div>
     @yield('information')
 
@@ -54,9 +61,8 @@
         <div id="sitemap">
             <h3>КАРТА САЙТА</h3>
             <div>
-                <a href="{{route('home')}}">ГЛАВНАЯ</a>
+                <a href="{{route('myhome')}}">ГЛАВНАЯ</a>
                 <a href="{{route('catalog')}}">КАТАЛОГ</a>
-                <a href="{{route('allrequest')}}">ЗАКАЗЫ</a>
             </div>
             <div>
                 <a href="{{route('support')}}">ПОМОЩЬ</a>

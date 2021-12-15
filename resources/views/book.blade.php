@@ -67,10 +67,17 @@
                 @csrf
             </p>
             </form>
-
-
+            @auth
+                <div>
+                    <a href="{{route('home')}}"><span class="fas fa-edit"></span></a>
+                </div>
+                <div>
+                    <a href="{{route('home')}}"><span class="fas fa-trash-alt"></span></a>
+                </div>
+            @endauth
         </div>
     </div>
+
     <div class="des">
         <p>Описание</p>
         <p>{{$book->Description}}</p>
