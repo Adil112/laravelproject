@@ -69,10 +69,10 @@
             </form>
             @auth
                 <div>
-                    <a href="{{route('home')}}"><span class="fas fa-edit"></span></a>
+                    <a href="{{route('book-edit', $book->IdBook)}}"><span class="fas fa-edit"></span></a>
                 </div>
                 <div>
-                    <a href="{{route('home')}}"><span class="fas fa-trash-alt"></span></a>
+                    <a href="{{route('bookRemove', $book->IdBook)}}"><span class="fas fa-trash-alt"></span></a>
                 </div>
             @endauth
         </div>

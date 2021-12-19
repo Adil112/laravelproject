@@ -1,4 +1,6 @@
 
+
+
 section {
     padding-bottom: 90px;
 }
@@ -96,4 +98,7 @@ figure figcaption span {
     font-size: 34px;
     color: #29c5e6;
 }
-
+.team-row figure:nth-child(5)
+{
+    margin-left: 0px;
+}

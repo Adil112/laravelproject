@@ -12,7 +12,7 @@ use App\Models\Books;
 class CatalogController extends Controller
 {
     public function catalog(){
-        $books = Books::orderBy('Name')->paginate(4);
+        $books = Books::orderBy('Name')->paginate(16);
         $s = "Поиск";
         $pubs = Publishers::get();
         $genres = Genres::get();

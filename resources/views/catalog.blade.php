@@ -74,7 +74,7 @@
                                     <button  class="btn btn-info" type="submit">Поиск</button>
                                 </div>
                                 @auth
-                                    <a href="{{route('home')}}"><span class="fas fa-plus-square"></span></a>
+                                    <a href="{{route('bookadd')}}"><span class="fas fa-plus-square"></span></a>
                                 @endauth
                             </div>
                     </div>
