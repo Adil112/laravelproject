@@ -29,6 +29,12 @@ class CartController extends Controller
     {
 
         $count = $req2->num;
+        $book = Books::where('IdBook', $IdBook)->first();
+        if($count > $book->Quantity)
+        {
+            session()->flash('warning','Недостаточно экземпляров книги на складе');
+            return redirect()->route('book',  $book->IdBook);
+        }
         //$id = $req2->id;
         $id = $IdBook;
         $requestId = session('req');
@@ -47,7 +53,7 @@ class CartController extends Controller
         $br->IdRequest = $requestId;
         $br->Quantity = $count;
         $br->save();
-        $book = Books::where('IdBook', $id)->first()->Name;
+
         return redirect()->route('cart');
     }
 
@@ -97,6 +103,21 @@ class CartController extends Controller
             return redirect()->route('cart');
         }
         $request = Requests::where('IdRequest', $requestId)->first();
+        foreach($request->books_requests as $el)
+        {
+            $id = $el->IdBook;
+            $qReq = $el->Quantity;
+            $book = Books::where('IdBook', $id)->first();
+            $book->Quantity -= $qReq;
+            if($book->Quantity >= 0) $book->save();
+            else {
+                session()->flash('warning','Недостаточно экземпляров книги на складе');
+                return redirect()->route('cart');
+            }
+
+
+        }
+
         $fullPrice = $request->calculate();
 
         $request->Status = 1;

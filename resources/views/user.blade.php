@@ -20,7 +20,7 @@
                 Роль
             </div>
             <div class="col-1" >
-                <a href="{{route('home')}}"><span class="fas fa-plus-square"></span></a>
+                <a href="{{route('indexUserAdd')}}"><span class="fas fa-plus-square"></span></a>
             </div>
 
         </div>
@@ -30,9 +30,14 @@
                 <div class="row">
                     <div class="col-3">{{$el->name}}</div>
                     <div class="col-3">{{$el->email}}</div>
-                    <div class="col-3">{{$el->role->Name}}</div>
-                    <a class="col-1" href="{{route('home')}}"><span class="fas fa-edit"></span></a>
-                    <a class="col-1" href="{{route('home')}}"><span class="fas fa-trash-alt"></span></a>
+                    @if(!is_null($el->role))
+                        <div class="col-3">{{$el->role->Name}}</div>
+                        @else
+                        <div class="col-3">Нет роли</div>
+                    @endif
+
+                    <a class="col-1" href="{{route('indexUserEdit', $el->id)}}"><span class="fas fa-edit"></span></a>
+                    <a class="col-1" href="{{route('userRemove', $el->id)}}"><span class="fas fa-trash-alt"></span></a>
                 </div>
 
             </div>
