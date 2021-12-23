@@ -31,6 +31,9 @@ Route::get('/allrequest', 'App\Http\Controllers\AllRequestController@allrequest'
 
 Route::get('/user', 'App\Http\Controllers\UserController@index')->name('user')->middleware('auth', 'is_admin');
 
+Route::get('/allrequest/download', 'App\Http\Controllers\AllRequestController@download')->name('ReqDownload');
+Route::get('/catalog/download', 'App\Http\Controllers\CatalogController@download')->name('CatalogDownload');
+
 Auth::routes([
     'reset' => false,
     'confirm' => false,

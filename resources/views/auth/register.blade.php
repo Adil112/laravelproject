@@ -11,7 +11,6 @@
                 <div id="heading">
                     <h1>РЕГИСТРАЦИЯ</h1>
                 </div>
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf

@@ -8,6 +8,10 @@
     <div id="heading">
         <h1>ЗАКАЗЫ</h1>
     </div>
+    @auth
+        <p> Скачать список заказов в JSON формате
+        <a href="{{route('ReqDownload')}}"><span class="fas fa-file-download"></span></a> </p>
+    @endauth
     <div class="order">
         @foreach($requests as $el)
         <div class="top-order container">
@@ -26,7 +30,7 @@
                 <div>
                     Адрес: {{$el->Address}} <br>
                     Телефон: {{$el->Phone}} <br>
-                    Способ олпаты: {{$el->pay->Name}} <br>
+                    Способ оплаты: {{$el->pay->Name}} <br>
                 </div>
             </div>
 

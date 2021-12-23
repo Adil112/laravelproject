@@ -65,6 +65,10 @@
             </div>
             <div class="col-9">
                 <section>
+                    @auth
+                        <p> Скачать каталог в JSON формате
+                            <a href="{{route('CatalogDownload')}}"><span class="fas fa-file-download"></span></a> </p>
+                    @endauth
                     <div class="d1">
                             <div class="search-box">
                                 <div class="search1">

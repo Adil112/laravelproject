@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Authors;
 use App\Models\Genres;
 use App\Models\Publishers;
+use App\Models\Requests;
 use Illuminate\Http\Request;
 use App\Models\Books;
+use Illuminate\Support\Facades\Storage;
 
 class CatalogController extends Controller
 {
@@ -76,7 +78,20 @@ class CatalogController extends Controller
             compact('books', 'pubs', 'genres', 'authors', 'maxPrice', 'minPrice', 'minYear','maxYear', 's'));
     }
 
+    public function download()
+    {
+        $books = Books::all();
 
+        $books->toArray();
+
+        Storage::disk('public')->put('books.json', json_encode($books));
+
+        $file= "..\storage\app\public/books.json";
+        $headers = array(
+            'Content-Type: application/json'
+        );
+        return \Illuminate\Support\Facades\Response::download($file,'books.json',$headers);
+    }
 
 
 
