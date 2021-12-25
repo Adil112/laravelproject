@@ -80,6 +80,7 @@ figure figcaption {
     display: block;
     text-decoration: none;
     text-align: center;
+    width: 168px;
 }
 figure figcaption span {
     display: block;

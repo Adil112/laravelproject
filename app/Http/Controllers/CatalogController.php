@@ -10,10 +10,14 @@ use App\Models\Requests;
 use Illuminate\Http\Request;
 use App\Models\Books;
 use Illuminate\Support\Facades\Storage;
+use App\Facade\ParserService;
 
 class CatalogController extends Controller
 {
+
     public function catalog(){
+
+        echo ParserService::parser();
         $books = Books::orderBy('Name')->paginate(16);
         $s = "Поиск";
         $pubs = Publishers::get();
@@ -109,4 +113,8 @@ class CatalogController extends Controller
     public function support(){
         return view('support');
     }
+
+
+
+
 }
