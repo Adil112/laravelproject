@@ -36,31 +36,31 @@
                 <div class="rows">
                     @if(!is_null($request))
                     @foreach($request->books_requests as $br)
-                    <div class="row">
-                        <div class="book">
-                            <div>
-                                <img src="{{$br->book->Image}}" width="150" height="250" alt="">
+                        <div class="row">
+                            <div class="book">
+                                <div>
+                                    <img src="{{$br->book->Image}}" width="150" height="250" alt="">
+                                </div>
+                                <div>
+                                    <b><a href="/" class="name">Название: {{$br->book->Name}}</a></b>
+                                    <p> Автор: {{$br->book->author->Name}} {{$br->book->author->Surname}}</p>
+                                    <p>Жанр: {{$br->book->genre->Name}}</p>
+                                    <p>Издатель: {{$br->book->publisher->Name}}</p>
+                                    <p>Доступно: {{$br->book->Quantity}}</p>
+                                    <form action="{{route('cart-remove', $br->book->IdBook)}}" method="POST">
+                                        <p><button type="submit" href="">Удалить</button></p>
+                                        @csrf
+                                    </form>
+                                </div>
                             </div>
-                            <div>
-                                <b><a href="/" class="name">Название: {{$br->book->Name}}</a></b>
-                                <p> Автор: {{$br->book->author->Name}} {{$br->book->author->Surname}}</p>
-                                <p>Жанр: {{$br->book->genre->Name}}</p>
-                                <p>Издатель: {{$br->book->publisher->Name}}</p>
-                                <p>Доступно: {{$br->book->Quantity}}</p>
-                                <form action="{{route('cart-remove', $br->book->IdBook)}}" method="POST">
-                                    <p><button type="submit" href="">Удалить</button></p>
-                                    @csrf
-                                </form>
+                            <div class="q1">{{$br->book->Price}}</div>
+                            <div class="q2">{{$br->Quantity}}</div>
+                            <div class="q3">
+                                <script>
+                                    document.write({{$br->book->Price}} * {{$br->Quantity}})
+                                </script>
                             </div>
                         </div>
-                        <div>{{$br->book->Price}}</div>
-                        <div>{{$br->Quantity}}</div>
-                        <div>
-                            <script>
-                                document.write({{$br->book->Price}} * {{$br->Quantity}})
-                            </script>
-                        </div>
-                    </div>
                     @endforeach
                     @endif
                 </div>

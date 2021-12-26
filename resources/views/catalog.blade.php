@@ -58,17 +58,16 @@
                             </label>
                         </p>
                     </div>
-
-
-
                 </aside>
             </div>
             <div class="col-9">
                 <section>
                     @auth
+                        @if(Auth::user()->IdRole === 1 || Auth::user()->IdRole === 2)
                         <p> Скачать каталог в JSON формате
                             <a href="{{route('CatalogDownload')}}"><span class="fas fa-file-download"></span></a> </p>
-                    @endauth
+                    @endif
+                        @endauth
                     <div class="d1">
                             <div class="search-box">
                                 <div class="search1">
@@ -78,7 +77,10 @@
                                     <button  class="btn btn-info" type="submit">Поиск</button>
                                 </div>
                                 @auth
+                                    @if(Auth::user()->IdRole === 1 || Auth::user()->IdRole === 2)
                                     <a href="{{route('bookadd')}}"><span class="fas fa-plus-square"></span></a>
+                                    <a href="{{route('parseBook')}}"><span class="fas fa-book"></span></a>
+                                        @endif
                                 @endauth
                             </div>
                     </div>
@@ -90,7 +92,7 @@
                                     <a href="{{route('book', $el->IdBook)}}">{{$el->Name}}</a>
                                     <span>{{$el->author->Surname}} {{$el->author->Name}}</span>
                                     <span>{{$el->publisher->Name}}, {{$el->Year}} г.</span>
-                                    <span>{{$el->Price}} руб.</span>
+                                    <span>{{$el->Price}} тг.</span>
                                 </figcaption>
                             </figure>
                         @endforeach

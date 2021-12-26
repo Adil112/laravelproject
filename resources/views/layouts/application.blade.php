@@ -40,8 +40,10 @@
             <li><a href="{{route('contacts')}}">КОНТАКТЫ</a></li>
             <br/>
             @auth
+                @if(Auth::user()->IdRole === 1 || Auth::user()->IdRole === 2)
                 <li><a href="{{route('allrequest')}}">ЗАКАЗЫ</a></li>
                 <li><a href="{{route('user')}}">Пользователи</a></li>
+                    @endif
             @endauth
         </ul>
     </nav>

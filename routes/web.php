@@ -17,23 +17,23 @@ Route::get('/catalog',  'App\Http\Controllers\CatalogController@catalog')->name(
 Route::get('/catalog/search',  'App\Http\Controllers\CatalogController@search')->name('search');
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('get-logout');
-Route::get('/bookadd', 'App\Http\Controllers\BookController@index')->name('bookadd');
+Route::get('/bookadd', 'App\Http\Controllers\BookController@index')->name('bookadd')->middleware('auth', 'is_role');
 Route::post('/bookadd', 'App\Http\Controllers\BookController@bookAdd')->name('book-confirm');
 Route::get('/useradd', 'App\Http\Controllers\UserController@indexUserAdd')->name('indexUserAdd');
 Route::post('/useradd', 'App\Http\Controllers\UserController@userAdd')->name('userAdd');
-Route::get('/bookedit/{IdBook}', 'App\Http\Controllers\BookController@bookEditForm')->name('book-edit');
+Route::get('/bookedit/{IdBook}', 'App\Http\Controllers\BookController@bookEditForm')->name('book-edit')->middleware('auth', 'is_role');
 Route::post('/bookedit/{IdBook}', 'App\Http\Controllers\BookController@bookEdit')->name('bookEdit');
 Route::get('/useredit/{IdUser}', 'App\Http\Controllers\UserController@indexUserEdit')->name('indexUserEdit');
 Route::post('/useredit/{IdUser}', 'App\Http\Controllers\UserController@userEdit')->name('userEdit');
-Route::get('/bookremove/{IdBook}', 'App\Http\Controllers\BookController@bookRemove')->name('bookRemove');
+Route::get('/bookremove/{IdBook}', 'App\Http\Controllers\BookController@bookRemove')->name('bookRemove')->middleware('auth', 'is_role');
 Route::get('/userremove/{IdUser}', 'App\Http\Controllers\UserController@userRemove')->name('userRemove');
-Route::get('/allrequest', 'App\Http\Controllers\AllRequestController@allrequest')->name('allrequest')->middleware('auth');
+Route::get('/allrequest', 'App\Http\Controllers\AllRequestController@allrequest')->name('allrequest')->middleware('auth', 'is_role');
 
 Route::get('/user', 'App\Http\Controllers\UserController@index')->name('user')->middleware('auth', 'is_admin');
 
 Route::get('/allrequest/download', 'App\Http\Controllers\AllRequestController@download')->name('ReqDownload');
-Route::get('/catalog/download', 'App\Http\Controllers\CatalogController@download')->name('CatalogDownload');
-
+Route::get('/catalog/download', 'App\Http\Controllers\CatalogController@download')->name('CatalogDownload')->middleware('auth', 'is_role');
+Route::get('/catalog/parser', 'App\Http\Controllers\CatalogController@parseBook')->name('parseBook')->middleware('auth', 'is_role');
 Auth::routes([
     'reset' => false,
     'confirm' => false,

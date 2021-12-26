@@ -15,9 +15,16 @@ use App\Facade\ParserService;
 class CatalogController extends Controller
 {
 
+    public function parseBook(){
+
+        $state = ParserService::parser();
+        if($state) session()->flash('success','Парсер закончил работу');
+        else session()->flash('warning','Сайт заблокировал');
+        return redirect()->route('catalog');
+    }
     public function catalog(){
 
-        echo ParserService::parser();
+
         $books = Books::orderBy('Name')->paginate(16);
         $s = "Поиск";
         $pubs = Publishers::get();
@@ -49,7 +56,7 @@ class CatalogController extends Controller
             array_push($where, $a);
         }
 
-        if($request->author != "Все издатели") {
+        if($request->author != "Все авторы") {
             $name = explode(' ', $request->author);
             $author = Authors::where('Name', 'LIKE', "%" . $name[0] . "%")->where('Surname', 'LIKE', "%" . $name[1] . "%")->first()->IdAuthor;
             $a = ['IdAuthor', '=', $author];

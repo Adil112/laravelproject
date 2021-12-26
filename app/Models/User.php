@@ -50,5 +50,14 @@ class User extends Authenticatable
     {
         return $this->IdRole===1;
     }
+    public function isEditor()
+    {
+        return $this->IdRole===2;
+    }
+    public function isRole()
+    {
+        return ($this->IdRole===2 || $this->IdRole===1);
+    }
+
 
 }

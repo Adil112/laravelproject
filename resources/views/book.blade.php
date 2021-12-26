@@ -69,12 +69,14 @@
             </p>
             </form>
             @auth
+                @if(Auth::user()->IdRole === 1 || Auth::user()->IdRole === 2)
                 <div>
                     <a href="{{route('book-edit', $book->IdBook)}}"><span class="fas fa-edit"></span></a>
                 </div>
                 <div>
                     <a href="{{route('bookRemove', $book->IdBook)}}"><span class="fas fa-trash-alt"></span></a>
                 </div>
+                    @endif
             @endauth
         </div>
     </div>
