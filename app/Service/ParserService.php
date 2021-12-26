@@ -43,10 +43,12 @@ class ParserService{
         if(!is_null(Books::where('Name', 'LIKE', "%".$name."%")->first())) return 2;
         $description = $html->find('[itemprop=description]', 0)->plaintext;
         $description = str_replace('&nbsp', ' ', $description);
+        $description = str_replace(';&mdash;', ' ', $description);
         $mark1 =  rand(2, 4);
         $mark2 = rand(1, 9);
         $mark = $mark1 .'.'. $mark2;
-        $price = $html->find('[itemprop=price]', 0)->getAttribute('content');
+        $price = rand(1200, 3900);
+        if(!is_null($html->find('[itemprop=price]', 0))) $price = $html->find('[itemprop=price]', 0)->getAttribute('content');
         $quantity = rand(15, 50);
         $image = $html->find('[itemprop=image]', 0)->getAttribute('src');
         $publisherStr = $html->find('[class=description-table]', 0)->children(0)->children(1)->plaintext;
@@ -73,17 +75,20 @@ class ParserService{
             $idGenre->save();
             $idGenre = Genres::where('Name', 'LIKE', "%".$genreq."%")->first()->IdGenre;
         }
+        $idAuthor = 8;
+        if(!is_null($html->find('b[itemprop=name]', 0)))
+        {
+            $fio = $html->find('b[itemprop=name]', 0)->plaintext;
+            $fio = explode(' ', $fio);
+            $num = count($fio);
+            $surname = $fio[$num-1];
+            $nameAuthor = $fio[$num-2];
 
+            $idAuthor = Authors::where('Surname', 'LIKE', "%".$surname."%")->firstOrNew(['Surname' => $surname,'Name' => $nameAuthor]);
+            $idAuthor->save();
+            $idAuthor = Authors::where('Surname', 'LIKE', "%".$surname."%")->first()->IdAuthor;
+        }
 
-        $fio = $html->find('b[itemprop=name]', 0)->plaintext;
-        $fio = explode(' ', $fio);
-        $num = count($fio);
-        $surname = $fio[$num-1];
-        $nameAuthor = $fio[$num-2];
-
-        $idAuthor = Authors::where('Surname', 'LIKE', "%".$surname."%")->firstOrNew(['Surname' => $surname,'Name' => $nameAuthor]);
-        $idAuthor->save();
-        $idAuthor = Authors::where('Surname', 'LIKE', "%".$surname."%")->first()->IdAuthor;
 
 
         $book = Books::create(

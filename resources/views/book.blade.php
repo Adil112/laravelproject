@@ -40,7 +40,7 @@
         </div>
         <div class="req">
             <p>
-                Цена: {{$book->Price}} руб.
+                Цена: {{$book->Price}} тг.
             </p>
             <p>
                 Доступно: {{$book->Quantity}} шт.

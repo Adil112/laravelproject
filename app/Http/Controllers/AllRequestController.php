@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Storage;
 class AllRequestController extends Controller
 {
     public function allrequest(){
-        $requests = Requests::get();
+        $requests = Requests::all()->where('Status','=', '1');
+
         return view('allrequest', compact('requests'));
     }
     public function download()
